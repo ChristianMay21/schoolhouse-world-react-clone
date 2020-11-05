@@ -1,0 +1,24 @@
+.Home {
+    display: inline-block;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-right: 369px;
+    margin-bottom: 10px;
+}
+
+.Home > * {
+    float: left;
+    align-items: center;
+}
+
+.Home-logo {
+    width: 20px;
+    height: 20px;
+    margin-left:15px;
+}
+
+.Home-text {
+    margin-left: 15px;
+}

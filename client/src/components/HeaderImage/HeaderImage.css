@@ -1,0 +1,91 @@
+.HeaderImage {
+    position: relative;
+    width: 100%;
+    height: calc((100vw / 1673) * 347);
+    background-size: 100% 100%; 
+    display: grid;
+    grid-template-columns: 23% 54% 23%;
+    grid-template-rows: 35.3% 32.35% 32.35%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0;
+    padding:0;
+ }
+
+.banner-contents {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.banner-icon {
+    float: left;
+    height: 7vw;
+    width: 7vw;
+}
+
+.banner-text-container {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 0px;
+}
+
+.banner-text {
+    margin-left: 1vw;
+    font-size: 0px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.banner-text-main {
+    letter-spacing: 0.1vw;
+    font-size: 3.6vw;
+    line-height: 1;
+    fill: white;
+    color: white;
+    font-weight: 600;
+}
+
+.banner-subtext {
+    letter-spacing: 0.05vw;
+    padding-top: 0.8vw;
+    padding-left: 0.6vw;
+    font-size: 1.8vw;
+    fill: white;
+    color: white;
+}
+
+.corner-box {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20.2vw;
+    height: 3.4vw;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 1.3vw 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 0.8vw;
+}
+
+.corner-img {
+    opacity: 1;
+    height: 2.5vw;
+    margin-left: 0.4vw;
+}
+
+.uchicago {
+    opacity: 0.7;
+    height: 2.1vw !important;
+}
+
+.loom {
+    height: 2.2vw !important;
+}

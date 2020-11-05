@@ -1,0 +1,24 @@
+.NavItem {
+    color: rgb(102, 102, 102);
+    fill: rgb(102, 102, 102);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.nav-item-container {
+    margin-right: 40px;
+    padding-bottom: 15px;
+}
+
+.nav-item-container.active {
+    color: rgb(13, 134, 143);
+    fill: rgb(102, 102, 102);
+    border-bottom-color: rgb(13, 134, 143);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.nav-item-container.active > *{
+    color: rgb(13, 134, 143);
+    fill: rgb(102, 102, 102);
+}
