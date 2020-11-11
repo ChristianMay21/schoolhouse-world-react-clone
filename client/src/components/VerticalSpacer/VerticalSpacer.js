@@ -8,7 +8,6 @@ class VerticalSpacer extends React.Component {
     }
 
     render() {
-        console.log(this.props.height+"px")
         return <div className="VerticalSpacer" style={{height: this.props.height}}></div>
     }
 }

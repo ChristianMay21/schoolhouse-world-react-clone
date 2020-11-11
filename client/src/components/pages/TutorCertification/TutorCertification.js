@@ -1,33 +1,15 @@
 import React from 'react';
 import styles from './TutorCertification.css';
 import VerticalSpacer from '../../VerticalSpacer/VerticalSpacer'
+import $ from 'jquery'
 
-let recorder, stream;
+let blobs, blob, recorder, stream, voiceStream, screenStream;
 
-function onStop() {
-
-}
-
-async function startRecording() {
-    stream = await navigator.mediaDevices.getDisplayMedia({
-        video: { mediaSource: "screen" }
-    });
-    recorder = new MediaRecorder(stream)
-
-    const chunks = [];
-    recorder.ondataavailable = e => chunks.push(e.data);
-    recorder.start();
-
-    recorder.onstop = e => {
-        const completeBlob = new Blob(chunks, { type: chunks[0].type });
-        let fd = new FormData();
-        fd.append('upl', localStorage.myfile, )
-    }
-}
 
 function stopRecording() {
-    recorder.stop();
-    stream.getVideoTracks()[0].stop();
+    recorder.stop()
+    stream.getTracks().forEach(s=>s.stop())
+    stream = null;
 }
 
 class TutorCertification extends React.Component {
@@ -37,9 +19,55 @@ class TutorCertification extends React.Component {
         this.state = {
             signup_part: 1,
             apiResponse: "",
-            recording: false
+            videoRecording: false,
+            videoSrc: null
         }
     }
+
+    startRecording = async () => {
+        screenStream = await navigator.mediaDevices.getDisplayMedia({
+            video: { mediaSource: "screen" },
+            audio: false
+        });
+
+        voiceStream = await navigator.mediaDevices.getUserMedia({
+            video: false, 
+            audio: true
+        })
+
+        let tracks = [...screenStream.getTracks(), ...voiceStream.getTracks()]
+
+        stream = new MediaStream(tracks)
+
+        blobs = []
+        recorder = new MediaRecorder(stream, {mimeType: 'video/webm'})
+        
+        recorder.ondataavailable = e => blobs.push(e.data);
+
+        recorder.onstop = async (e) => {
+            blob = new Blob(blobs, {type: blobs[0].type})
+            //let url = window.URL.createObjectURL(blob)
+            this.setState({ videoSrc: URL.createObjectURL(blob) })
+            const route = 'http://localhost:9000/tutorCert'
+
+            var file = new File([blob], "myVideo", {type: 'video/webm; codecs=webm'})
+            var formData = new FormData();
+            formData.append('fname', 'test.webm')
+            formData.append('data', blob)
+
+            $.ajax({
+                type: 'POST',
+                url: route,
+                data: formData,
+                processData: false,
+                contentType: false
+            }).done(function(data) {
+                console.log("data", data)
+            })
+        }
+        recorder.start();
+    }
+
 
     callAPI = () => {
         fetch("http://localhost:9000/testAPI")
@@ -55,7 +83,7 @@ class TutorCertification extends React.Component {
         this.setState((prevState, props) => ({ recording: !prevState.recording }),
             () => {
                 if (this.state.recording === true) {
-                    startRecording()
+                    this.startRecording()
                 } else {
                     stopRecording()
                 }
@@ -91,6 +119,14 @@ class TutorCertification extends React.Component {
                         <p>Please sign up as soon as possible!</p>
                         <button onClick={this.handleRecording}>{this.state.recording ? "Stop Recording" : "Start Recording"}</button>
                         <p>{this.state.apiResponse}</p>
+                        <div>
+                            <audio controls className="audio-element">
+                                <source src="https://assets.coderrocketfuel.com/pomodoro-times-up.mp3"></source>
+                            </audio>
+                        </div>
+                        <video src={this.state.videoSrc} autoPlay />
+
+
                     </div>
                 </div>
             </div>
