@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './TutorCertification.css';
 import VerticalSpacer from '../../VerticalSpacer/VerticalSpacer'
+import Recorder from '../../Recorder/Recorder'
 import $ from 'jquery'
 
 let blobs, blob, recorder, stream, voiceStream, screenStream;
