@@ -4,12 +4,14 @@ const multipartMiddleware = multipart()
 const path = require('path')
 const os = require('os')
 const fs = require('fs')
+const cors = require('cors')
 const ffmpeg = require('fluent-ffmpeg')
 const nodemailer = require("nodemailer")
 
 var express = require('express')
 var app = express()
 app.use(express.static('.'))
+app.use(cors)
 
 app.get('/', function (req, res) {
     res.send('Hello world')
@@ -81,8 +83,6 @@ async function nmailer(attachment) {
             }
 
         })
-    
-        console.log("Message sent: %s", info.messageId)
     }
     main().catch(console.error);
 }

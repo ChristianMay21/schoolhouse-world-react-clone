@@ -1,0 +1,78 @@
+{
+    "Calculus": {
+        "Limits and continuity": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/ab-limits-new/test/ab-limits-new-unit-test?modal=1"
+        },
+        "Differentiation: definition and basic derivative rules": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-1-new/test/ab-differentiation-1-new-unit-test?modal=1"
+        },
+        "Differentiation: composite, implicit, and inverse functions": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differentiation-2-new/test/ab-differentiation-2-new-unit-test?modal=1"
+        },
+        "Contextual applications of differentiation": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-contextual-applications-new/test/ab-diff-contextual-applications-new-unit-test?modal=1"
+        },
+        "Applying derivatives to analyze functions": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/ab-diff-analytical-applications-new/test/ab-diff-analytical-applications-new-unit-test?modal=1"
+        },
+        "Integration and accumulation of change": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/ab-integration-new/test/ab-integration-new-unit-test?modal=1"
+        },
+        "Differential equations": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/ab-differential-equations-new/test/ab-differential-equations-new-unit-test?modal=1"
+        },
+        "Applications of integration": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/ab-applications-of-integration-new/test/ab-applications-of-integration-new-unit-test?modal=1"
+        },
+        "Course Challenge - Get certified across all units instead of one-by-one": {
+            "test": "https://www.khanacademy.org/math/ap-calculus-ab/test/subject-challenge?modal=1"
+        }
+    },
+    "Statistics": {
+        "Analyzing categorical data": {
+            "test": "https://www.khanacademy.org/math/ap-statistics/analyzing-categorical-ap/test/analyzing-categorical-ap-unit-test?modal=1"
+        },
+        "Displaying and describing quantitative data" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/quantitative-data-ap/test/quantitative-data-ap-unit-test?modal=1"
+        },
+        "Summarizing quantitative data" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/summarizing-quantitative-data-ap/test/summarizing-quantitative-data-ap-unit-test?modal=1"
+        },
+        "Modeling data distributions" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/density-curves-normal-distribution-ap/test/density-curves-normal-distribution-ap-unit-test?modal=1"
+        },
+        "Exploring bivariate numerical data" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/bivariate-data-ap/test/bivariate-data-ap-unit-test?modal=1"
+        },
+        "Study design" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/gathering-data-ap/test/gathering-data-ap-unit-test?modal=1"
+        },
+        "Probability" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/probability-ap/test/probability-ap-unit-test?modal=1"
+        },
+        "Random variables" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/random-variables-ap/test/random-variables-ap-unit-test?modal=1"
+        },
+        "Sampling distributions" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/sampling-distribution-ap/test/sampling-distribution-ap-unit-test?modal=1"
+        },
+        "Confidence intervals" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/estimating-confidence-ap/test/estimating-confidence-ap-unit-test?modal=1"
+        },
+        "Significance tests (hypothesis testing)" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/tests-significance-ap/test/tests-significance-ap-unit-test?modal=1"
+        },
+        "Inference comparing two groups or populations" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/two-sample-inference/test/two-sample-inference-unit-test?modal=1"
+        },
+        "Chi-square tests for categorical data" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/chi-square-tests/test/chi-square-tests-unit-test?modal=1"
+        },
+        "More on regression" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/inference-slope-linear-regression/test/inference-slope-linear-regression-unit-test?modal=1"
+        },
+        "Course challenge - Get certified across all units instead of one-by-one" : {
+            "test": "https://www.khanacademy.org/math/ap-statistics/test/subject-challenge?modal=1"
+        }
+    }
+}

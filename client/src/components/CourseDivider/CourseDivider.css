@@ -1,0 +1,15 @@
+.CourseDivider {
+}
+
+.top-course-divider {
+    border-bottom-color: rgb(224, 224, 224);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    height: 5px;
+    width: 100%;
+}
+
+.bottom-course-divider {
+    height: 5px;
+    width: 100%;
+}

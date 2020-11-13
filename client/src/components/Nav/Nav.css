@@ -1,5 +1,13 @@
 .Nav {
+    border-bottom-color: rgb(224, 224, 224);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
     display: flex;
     flex-direction: row;
-    margin-top: 15px;
+    padding-top: 15px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    width: 100%;
 }

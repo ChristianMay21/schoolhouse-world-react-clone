@@ -1,1 +1,97 @@
 .Course {}
+
+.course-icon {
+    height: 24px;
+    width: 24px;
+    margin-right: 7.2px;
+}
+
+.course-title {
+    color: rgb(27,148,162);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+}
+
+.course-header:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(27, 148, 162);
+}
+
+.course-header {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.lesson {
+    display: grid;
+    grid-template-columns: 24px auto;
+    height: 37px;
+}
+
+.lesson-num-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.lesson-num {
+    color: rgb(174,174,174)
+}
+
+.lesson-subcontainer {
+    display: grid;
+    grid-template-columns: auto 104px 86px;
+    border-top-color: rgb(224, 224, 224);
+    border-top-style: solid;
+    border-top-width: 1px;
+    align-items: center;
+}
+
+.lesson-name-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.lesson-name {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+}
+
+.lesson-btn {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 14px;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.practice {
+    background-color: #7F9FDA;
+}
+
+.practice:hover {
+    background-color: #6C87B9;
+}
+
+.start {
+    background-color: #73C886;
+}
+
+.start:hover {
+    background-color: #62AA72;
+}

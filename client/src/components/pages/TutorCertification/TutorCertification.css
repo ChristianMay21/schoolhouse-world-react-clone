@@ -1,1 +1,28 @@
 .TutorCertification {}
+
+h2 {
+    margin-bottom: 16px;
+}
+
+ol {
+    padding-inline-start: 20px;
+    margin-bottom: 0px;
+}
+
+p {
+    margin-block-start: 0px;
+}
+
+li {
+    padding-left: 4px;
+    padding-bottom: 7px;
+}
+
+a {
+    color: rgb(27, 148, 162);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
