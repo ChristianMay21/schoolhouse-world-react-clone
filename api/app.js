@@ -4,20 +4,22 @@ const multipartMiddleware = multipart()
 const path = require('path')
 const os = require('os')
 const fs = require('fs')
-const cors = require('cors')
 const ffmpeg = require('fluent-ffmpeg')
 const nodemailer = require("nodemailer")
 
 var express = require('express')
 var app = express()
 app.use(express.static('.'))
-app.use(cors)
 
 app.get('/', function (req, res) {
+    console.log('detecting get request')
     res.send('Hello world')
 })
 
+app.get('')
+
 app.post('/tutorCert', multipartMiddleware, function(req, res) {
+    console.log('in post request')
     console.log('files', req.files.data.path)
     let location = path.join('./uploads', 'upload.webm')
     console.log(location)
@@ -48,8 +50,7 @@ function postProcessing() {
 
 async function nmailer(attachment) {
     async function main() {
-        let testAccount = await nodemailer.createTestAccount();
-
+        console.log('in main')
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {

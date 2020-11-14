@@ -1,0 +1,89 @@
+.TestModal {
+    position: fixed;
+    background-color: rgba(60,50,80,0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body {
+    max-width: 910px;
+    min-width: 300px;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 12px;
+    box-shadow: rgba(0,0,0,0.15) 0px 0px 8px 0px;
+}
+
+.modal-body>h2 {
+    color: rgb(68,68,68);
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.2px;
+    font-size: 40px;
+}
+
+.modal-body>h3 {
+    color: rgb(78, 113, 181);
+    line-height: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-body>p {
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.modal-body>p:not(.warning) {
+    color: rgb(68,68,68);
+}
+
+.warning {
+    color: #BF4848;
+}
+
+.tests-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.take-test-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.test {
+    border-radius: 14px;
+    color: white;
+    font-weight: 600;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
+}
+
+.take-test {
+    background-color: #7F9FDA;
+}
+.take-test:hover {
+    background-color: #6C87B9;
+}
+.launch-test {
+    background-color: #73C886;
+}
+.launch-test:hover {
+    background-color: #62AA72;
+}

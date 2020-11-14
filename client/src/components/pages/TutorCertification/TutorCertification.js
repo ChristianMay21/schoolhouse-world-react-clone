@@ -39,11 +39,11 @@ class TutorCertification extends React.Component {
                             In the future, we hope to connect highly reputed tutors with opportunities in higher education, scholarships and internships. Build your profile even further
                             (and help students from around the world), by applying to tutor the topics you have mastered <a href="https://coda.io/@schoolhouse/welcome/tutor-sign-up-72">here</a>.
                         </p>
-                        <h2>Sign up now</h2>
+                        <h2>Part 1: Sign Up</h2>
                         <p>Please sign up as soon as possible using the Typeform below.</p>
                         <TutorCertTypeform />
                         <VerticalSpacer height="55px" />
-                        <h2>Start practicing</h2>
+                        <h2>Part 2: Prove your Knowledge</h2>
                         <p>Select a course you'd like to become a certified tutor in. Then Select <em>Practice</em> to review the content on a unit test, and <em>Start</em> when you're ready to give it a try. Remember, you can retry the test as many times as you'd like.</p>
                         <p><strong>Need some extra help preparing? Sign up for free, small-group tutoring <a href="https://coda.io/@schoolhouse/welcome/sign-up-for-free-tutoring-70">here</a></strong></p>
                         <CourseDivider />

@@ -11,11 +11,14 @@ class Recorder extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            videoRecording: false
+            step: 'prerecord'
         }
     }
 
     startRecording = async () => {
+        if(this.props.start) {
+            this.props.start()
+        }
         screenStream = await navigator.mediaDevices.getDisplayMedia({
             video: { mediaSource: "screen" },
             audio: false
@@ -43,7 +46,7 @@ class Recorder extends React.Component {
             var formData = new FormData();
             formData.append('fname', 'upload.webm')
             formData.append('data', blob)
-
+            console.log('about to send ajax request')
             $.ajax({
                 type: 'POST',
                 url: route,
@@ -62,24 +65,64 @@ class Recorder extends React.Component {
         recorder.stop()
         stream.getTracks().forEach(s => s.stop())
         stream = null;
+        if(this.props.stop) {
+            this.props.stop()
+        }
     }
 
-    handleRecording = () => {
-        this.setState((prevState, props) => ({ recording: !prevState.recording }),
-            () => {
-                if (this.state.recording === true) {
+    handleClick = () => {
+        this.setState((prevState, props) => {
+            switch(prevState.step) {
+                case "prerecord":
+                    return {step: "pretest"}
+                case "pretest":
+                    return {step: "test"}
+                case "test":
+                    return {step: "posttest"}
+                case "posttest":
+                    return {step: "peerreview"}
+                default:
+                    break;
+            }
+        }, () => {
+            switch(this.state.step) {
+                case "pretest":
                     this.startRecording()
-                } else {
+                    break;
+                case "test":
+                    this.props.launchTest();
+                    break;
+                case "posttest":
                     this.stopRecording()
-                }
-            })
+                    break;
+                case "peerreview":
+                    break;
+                default:
+                    this.props.peerReview()
+                    break;
+            }
+        })
+
     }
 
-    
+    getButtonText = () => {
+        let buttonText = {
+            "prerecord": "Start Recording",
+            "pretest": "Start Test",
+            "test": "Submit Test",
+            "posttest": "Peer Review",
+            "peerreview": "Peer Review is not implemented yet!"
+        }
+        return buttonText[this.state.step]
+    }
 
     render() {
         return <div className="Recorder">
-            <button onClick={this.handleRecording}>{this.state.recording ? "Stop Recording" : "Start Recording"}</button>
+            <div className="take-test-container" onClick={this.takeTest}>
+                <div onClick={this.handleClick}>
+                    <span className="test take-test">{this.getButtonText()}</span>
+                </div>
+            </div>
         </div>
     }
 }

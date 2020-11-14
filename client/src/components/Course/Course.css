@@ -95,3 +95,7 @@
 .start:hover {
     background-color: #62AA72;
 }
+
+.ReactCollapse--collapse {
+    transition: height 500ms;
+}
